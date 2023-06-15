@@ -74,8 +74,8 @@ const authentication = (request, response, next) => {
 
 const tweetAccessVerification = async (request, response, next) => {
   const { tweetId } = request.params;
-  const { userId, name } = request;
-  console.log(name);
+  const { userId } = request;
+
   const getTweetQuery = `SELECT
 *
 FROM tweet INNER JOIN follower
